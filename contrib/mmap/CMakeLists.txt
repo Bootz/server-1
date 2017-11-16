@@ -25,19 +25,17 @@ if(!WIN32)
 endif()
 
 include_directories(
-    ../../src
-    ../../src/shared
-    ../../src/game
-    ../../src/game/vmap
-    ../../dep/include/g3dlite
-    ../../src/framework
-    ../../dep/ACE_wrappers
-    ../../objdir/dep/ACE_wrappers
-    ../../dep/recastnavigation/Detour/Include
-    ../../dep/recastnavigation/Recast/Include
-    ../../dep/src/zlib
+    ${CMAKE_SOURCE_DIR}/src
+    ${CMAKE_SOURCE_DIR}/src/shared
+    ${CMAKE_SOURCE_DIR}/src/game
+    ${CMAKE_SOURCE_DIR}/src/game/vmap
+    ${CMAKE_SOURCE_DIR}/dep/include/g3dlite
+    ${CMAKE_SOURCE_DIR}/src/framework
+    ${CMAKE_SOURCE_DIR}/dep/recastnavigation/Detour/Include
+    ${CMAKE_SOURCE_DIR}/dep/recastnavigation/Recast/Include
+    ${CMAKE_SOURCE_DIR}/dep/src/zlib
+    ${ACE_INCLUDE_DIR}
 )
-
 
 add_library(vmap
 	../../src/game/vmap/BIH.cpp

@@ -24,10 +24,13 @@ ADD_DEFINITIONS("-ggdb")
 ADD_DEFINITIONS("-O3")
 endif()
 
-include_directories(../../src/shared)
-include_directories(../../src/game/vmap/)
-include_directories(../../dep/include/g3dlite/)
-include_directories(../../src/framework/)
+include_directories(
+  ${CMAKE_SOURCE_DIR}/src/shared
+  ${CMAKE_SOURCE_DIR}/src/game/vmap
+  ${CMAKE_SOURCE_DIR}/dep/include/g3dlite
+  ${CMAKE_SOURCE_DIR}/src/framework
+  ${ACE_INCLUDE_DIR}
+)
 
 add_executable(vmap_assembler vmap_assembler.cpp)
 target_link_libraries(vmap_assembler vmap ${ACE_LIBRARIES})
